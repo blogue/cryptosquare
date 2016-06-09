@@ -28,7 +28,6 @@ var cryptosquare = function(string){
     crypto[i] = characterArray.splice(0, numberColumns);
   }
 
-
   for (j=0; j <= crypto.length; j ++) {
     for(k=0; k < crypto.length; k++) {
       if (crypto[k][j]) {
@@ -40,7 +39,6 @@ var cryptosquare = function(string){
   for (l = 5; l < (outputArray.length + 6); l += 6) {
       outputArray.splice(l, 0, " ");
   }
-
 
   var output = outputArray.join("");
   return output;
