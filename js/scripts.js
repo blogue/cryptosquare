@@ -16,8 +16,27 @@ $(document).ready(function(){
 //business rules
 
 var cryptosquare = function(string){
-debugger;
+
   string = string.replace(/[^a-zA-Z0-9]/g, "");
   var characterArray = string.toLowerCase().split("");
+  var numberColumns = Math.ceil((Math.sqrt(string.length)));
+  var crypto = [];
+  var outputArray = [];
+  var count = 0;
 
+  for (i=0; i < numberColumns - 1; i++) {
+    crypto[i] = characterArray.splice(0, numberColumns);
+  }
+
+
+  for (j=0; j <= crypto.length; j ++) {
+    for(k=0; k < crypto.length; k++) {
+      if (crypto[k][j]) {
+        outputArray[count] = (crypto[k][j]);
+        count++;
+      }
+    }
+  }
+  var output = outputArray.join("");
+  return output;
 }
