@@ -14,3 +14,10 @@ $(document).ready(function(){
 });
 
 //business rules
+
+var cryptosquare = function(string){
+debugger;
+  string = string.replace(/[^a-zA-Z0-9]/g, "");
+  var characterArray = string.toLowerCase().split("");
+
+}
