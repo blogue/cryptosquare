@@ -24,7 +24,7 @@ var cryptosquare = function(string){
   var outputArray = [];
   var count = 0;
 
-  for (i=0; i < numberColumns - 1; i++) {
+  for (i=0; i <= numberColumns; i++) {
     crypto[i] = characterArray.splice(0, numberColumns);
   }
 
@@ -37,6 +37,11 @@ var cryptosquare = function(string){
       }
     }
   }
+  for (l = 5; l < (outputArray.length + 6); l += 6) {
+      outputArray.splice(l, 0, " ");
+  }
+
+
   var output = outputArray.join("");
   return output;
 }
